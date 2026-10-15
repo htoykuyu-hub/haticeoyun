@@ -1,4 +1,5 @@
 import { Question, QuestionBlock, Particle, FloatingText, LevelConfig, TurtleEnemy, COSTUMES, Costume } from './types.ts';
+import { getLevelQuestions } from './questions.ts';
 import { audio } from './audio.ts';
 import { haptics } from './haptics.ts';
 
@@ -657,8 +658,10 @@ export class GameEngine {
 
             if (this.onStateChange) this.onStateChange();
 
-            // Check game over
+            // Check game over (can bittiğinde puanı sıfırla)
             if (this.lives <= 0) {
+              this.score = 0;
+              this.streak = 0;
               this.isGameOver = true;
               if (this.onGameOver) this.onGameOver();
             }
@@ -836,7 +839,7 @@ export class GameEngine {
       }
 
     } else {
-      // WRONG ANSWER: SHAKE BLOCK AND SPAWN KOOPA TROOPA TURTLE!
+      // YANLIŞ CEVAP: Blok sarsılır, kaplumbağa çıkar ve DİREK 1 CANI SİLER!
       b.state = 'hit_wrong';
       b.shakeTimer = 0.45;
       audio.playWrong();
@@ -844,16 +847,30 @@ export class GameEngine {
       haptics.wrong();
 
       this.streak = 0;
-      this.cat.hitReaction = 0.4;
+      this.cat.hitReaction = 0.5;
+      this.cat.invulnerableTimer = 1.3;
 
       // Spawn a Koopa Troopa turtle dropping from the wrong block!
       this.spawnTurtleEnemy(b.x + b.width / 2 - 21, b.y + b.height);
 
+      // DİREK 1 CAN SİLİNİR (Kaplumbağa hemen canı alır!)
+      this.lives -= 1;
+      audio.playHurtLifeLost();
+      haptics.lifeLost();
+
       const q = this.currentQuestions[this.currentQuestionIndex];
       this.currentHint = q ? q.hint : 'Tekrar dene!';
-      this.addFloatingText(b.x + b.width / 2, b.y - 15, 'DİKKAT! KAPLUMBAĞA! 🐢', '#ef4444', 22);
+      this.addFloatingText(b.x + b.width / 2, b.y - 15, 'KAPLUMBAĞA CANINI ALDI! -1 CAN! 💔', '#ef4444', 24);
 
       this.spawnDustParticles(b.x + b.width / 2, b.y + b.height);
+
+      // 3 CAN BİTİP ÖLDÜĞÜNDE PUANI SIFIRLA!
+      if (this.lives <= 0) {
+        this.score = 0;
+        this.streak = 0;
+        this.isGameOver = true;
+        if (this.onGameOver) this.onGameOver();
+      }
 
       if (this.onStateChange) this.onStateChange();
     }
@@ -905,7 +922,11 @@ export class GameEngine {
 
   public nextLevel() {
     if (this.currentLevelIndex + 1 < this.levelConfigs.length) {
-      this.setupLevel(this.currentLevelIndex + 1);
+      const nextIdx = this.currentLevelIndex + 1;
+      this.setupLevel(nextIdx);
+      const fresh = getLevelQuestions(nextIdx + 1);
+      this.setQuestions(fresh);
+      if (this.onStateChange) this.onStateChange();
     }
   }
 
@@ -913,15 +934,21 @@ export class GameEngine {
     this.score = 0;
     this.streak = 0;
     this.lives = 3;
+    this.isGameOver = false;
     this.setupLevel(0);
+    const fresh = getLevelQuestions(1);
+    this.setQuestions(fresh);
+    if (this.onStateChange) this.onStateChange();
   }
 
   public retryCurrentLevel() {
+    this.score = 0;
+    this.streak = 0;
     this.lives = 3;
     this.isGameOver = false;
     this.setupLevel(this.currentLevelIndex);
-    const questions = this.currentQuestions;
-    this.setQuestions(questions);
+    const fresh = getLevelQuestions(this.currentLevelIndex + 1);
+    this.setQuestions(fresh);
     if (this.onStateChange) this.onStateChange();
   }
 

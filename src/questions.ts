@@ -83,38 +83,70 @@ function generateDistractors(num1: number, num2: number, answer: number): number
   return shuffle([answer, ...selected]);
 }
 
-// Pre-curated, pedagogically structured question set for each level (10 questions per level = 40 total)
+// Dynamically generate and randomize 10 unique curriculum questions for the level
 export function getLevelQuestions(level: number): Question[] {
-  let pairs: [number, number][] = [];
+  const pool: [number, number][] = [];
 
   if (level === 1) {
-    // 2, 3, 4 multiplication tables
-    pairs = [
-      [2, 3], [3, 4], [4, 5], [2, 7], [3, 6],
-      [4, 4], [2, 9], [3, 8], [4, 7], [3, 9]
-    ];
+    // 2, 3, 4 multiplication tables (multipliers 2 to 10)
+    for (const t of [2, 3, 4]) {
+      for (let m = 2; m <= 10; m++) {
+        pool.push([t, m]);
+      }
+    }
   } else if (level === 2) {
-    // 5, 6, 7 multiplication tables
-    pairs = [
-      [5, 4], [6, 3], [7, 2], [5, 6], [6, 6],
-      [7, 4], [5, 8], [6, 7], [7, 6], [7, 8]
-    ];
+    // 5, 6, 7 multiplication tables (multipliers 2 to 10)
+    for (const t of [5, 6, 7]) {
+      for (let m = 2; m <= 10; m++) {
+        pool.push([t, m]);
+      }
+    }
   } else if (level === 3) {
-    // 8, 9, 10 multiplication tables
-    pairs = [
-      [8, 3], [9, 2], [10, 4], [8, 6], [9, 5],
-      [8, 7], [9, 7], [10, 8], [8, 9], [9, 9]
-    ];
+    // 8, 9, 10 multiplication tables (multipliers 2 to 10)
+    for (const t of [8, 9, 10]) {
+      for (let m = 2; m <= 10; m++) {
+        pool.push([t, m]);
+      }
+    }
   } else {
-    // Level 4: Mixed review & Princess castle run
-    pairs = [
-      [4, 8], [6, 8], [7, 7], [9, 6], [8, 8],
-      [7, 9], [9, 8], [6, 9], [8, 5], [9, 9]
-    ];
+    // Level 4: Mixed review with harder 3rd grade facts
+    const hardTables = [4, 5, 6, 7, 8, 9];
+    for (const t of hardTables) {
+      for (let m = 6; m <= 9; m++) {
+        pool.push([t, m]);
+      }
+    }
+    // Also include a few extra challenging ones
+    pool.push([7, 7], [8, 8], [9, 9], [6, 7], [7, 8], [8, 9], [6, 8], [7, 9], [9, 6], [8, 7]);
   }
 
-  // Shuffle the question order slightly for variety if desired, but keep deterministic length 10
-  return pairs.map(([n1, n2]) => {
+  // Shuffle the pool and pick 10 unique pairs
+  const shuffledPool = shuffle(pool);
+  const selectedPairs: [number, number][] = [];
+  const seen = new Set<string>();
+
+  for (const [n1, n2] of shuffledPool) {
+    const key = `${n1}x${n2}`;
+    const reverseKey = `${n2}x${n1}`;
+    if (!seen.has(key) && !seen.has(reverseKey)) {
+      seen.add(key);
+      // Randomly decide order (e.g. 4x7 or 7x4)
+      if (Math.random() > 0.5) {
+        selectedPairs.push([n2, n1]);
+      } else {
+        selectedPairs.push([n1, n2]);
+      }
+    }
+    if (selectedPairs.length >= 10) break;
+  }
+
+  // Fallback if pool had fewer than 10 unique
+  while (selectedPairs.length < 10) {
+    const fallback = pool[Math.floor(Math.random() * pool.length)];
+    selectedPairs.push(fallback);
+  }
+
+  return selectedPairs.map(([n1, n2]) => {
     const answer = n1 * n2;
     const options = generateDistractors(n1, n2, answer);
     const hint = `İpucu: ${n1} x ${n2} demek, ${n1} tane ${n2}'yi (veya ${n2} tane ${n1}'i) toplamak demektir!`;

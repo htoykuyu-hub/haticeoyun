@@ -958,12 +958,12 @@
       }
     ];
 
-    // 3. KOSTÜM TANIMLARI
+    // 3. KOSTÜM TANIMLARI (12 Adet 3 Boyutlu Premium Kostüm & Yüksek Altın Sistemi)
     const COSTUMES = [
       {
         id: 'classic',
         name: 'Klasik Mario Kedi',
-        desc: 'Efsanevi kırmızı şapka ve mavi tulum!',
+        desc: '3 Boyutlu ikonik kırmızı şapka ve mavi işçi tulumu!',
         cost: 0,
         minScore: 0,
         hatColor: '#dc2626',
@@ -976,9 +976,9 @@
       {
         id: 'luigi',
         name: 'Luigi Kedi Stili',
-        desc: 'Zümrüt yeşili şapka ve cesur macera tulumu!',
-        cost: 4,
-        minScore: 300,
+        desc: 'Zümrüt yeşili 3D şapka, kobalt tulum ve cesur macera ruhu!',
+        cost: 25,
+        minScore: 400,
         hatColor: '#16a34a',
         shirtColor: '#16a34a',
         overallsColor: '#1d4ed8',
@@ -989,9 +989,9 @@
       {
         id: 'fire',
         name: 'Ateş Kedisi (Fire Cat)',
-        desc: 'Ateş çiçeği gücü! Beyaz şapka ve alev aurası.',
-        cost: 8,
-        minScore: 800,
+        desc: 'Ateş çiçeği gücü! Sedefli beyaz şapka ve alev aurası.',
+        cost: 55,
+        minScore: 1000,
         hatColor: '#ffffff',
         shirtColor: '#ffffff',
         overallsColor: '#dc2626',
@@ -1001,11 +1001,25 @@
         icon: '🔥'
       },
       {
+        id: 'ice',
+        name: 'Buz Kristali Kedisi',
+        desc: 'Kutup soğuğu! Buzul mavisi tulum ve uçuşan kar kristalleri.',
+        cost: 85,
+        minScore: 1800,
+        hatColor: '#06b6d4',
+        shirtColor: '#0891b2',
+        overallsColor: '#0284c7',
+        specialAura: 'ice',
+        badge: 'I',
+        tag: 'DONMUŞ',
+        icon: '❄️'
+      },
+      {
         id: 'tanooki',
         name: 'Tanooki Rakun Kedi',
-        desc: 'Özel yaprak gücü! Ekstra çizgili süper kuyruk.',
-        cost: 14,
-        minScore: 1500,
+        desc: 'Özel yaprak gücü! 3D çizgili tüylü rakun kuyruğu ve kestane kürk.',
+        cost: 120,
+        minScore: 2500,
         hatColor: '#92400e',
         shirtColor: '#b45309',
         overallsColor: '#78350f',
@@ -1016,9 +1030,9 @@
       {
         id: 'super_cape',
         name: 'Süper Kahraman Kedisi',
-        desc: 'Gizemli maske ve uçuşan sarı süper pelerin!',
-        cost: 20,
-        minScore: 2200,
+        desc: 'Gizemli maske, uçuşan 3D sarı pelerin ve yıldızlar!',
+        cost: 165,
+        minScore: 3200,
         hatColor: '#4f46e5',
         shirtColor: '#4338ca',
         overallsColor: '#312e81',
@@ -1030,11 +1044,84 @@
         icon: '🦸'
       },
       {
+        id: 'rainbow',
+        name: 'Gökkuşağı Yıldız Kedisi',
+        desc: 'Süper Yıldız gücü! Renk değiştiren prizmatik gökkuşağı aurası.',
+        cost: 220,
+        minScore: 4000,
+        hatColor: '#ec4899',
+        shirtColor: '#8b5cf6',
+        overallsColor: '#3b82f6',
+        specialAura: 'rainbow',
+        badge: '⭐',
+        tag: 'YILDIZ GÜCÜ',
+        icon: '🌈'
+      },
+      {
+        id: 'diamond_knight',
+        name: 'Elmas Şövalye Kedisi',
+        desc: '3 Boyutlu elmas kask, zırhlı tulum ve kristal parlama efektleri!',
+        cost: 280,
+        minScore: 5000,
+        hatColor: '#0284c7',
+        shirtColor: '#0369a1',
+        overallsColor: '#075985',
+        specialAura: 'ice',
+        badge: '⚔️',
+        tag: 'ZIRHLI',
+        icon: '💎'
+      },
+      {
+        id: 'cosmic',
+        name: 'Kozmik Galaksi Kedisi',
+        desc: 'Derin uzay nebulası! Parıldayan yıldız tozu ve kozmik halkalar.',
+        cost: 350,
+        minScore: 6200,
+        hatColor: '#1e1b4b',
+        shirtColor: '#312e81',
+        overallsColor: '#0f172a',
+        capeColor: '#4338ca',
+        specialAura: 'cosmic',
+        badge: '🌌',
+        tag: 'KOZMİK',
+        icon: '🪐'
+      },
+      {
+        id: 'cyber_mecha',
+        name: 'Siber Mecha Kedisi',
+        desc: 'Geleceğin robotu! Parlayan LED vizör ve siber devre çizgileri.',
+        cost: 430,
+        minScore: 7500,
+        hatColor: '#334155',
+        shirtColor: '#1e293b',
+        overallsColor: '#0f172a',
+        specialAura: 'cyber',
+        badge: '🤖',
+        tag: 'FÜTÜRİSTİK',
+        icon: '⚡'
+      },
+      {
+        id: 'unicorn',
+        name: 'Büyülü Tekboynuz Kedi',
+        desc: 'Spiral altın boynuz, pembe peri pelerini ve gökkuşağı sihir tozu!',
+        cost: 520,
+        minScore: 8800,
+        hatColor: '#f472b6',
+        shirtColor: '#ec4899',
+        overallsColor: '#a855f7',
+        capeColor: '#f43f5e',
+        hasCrown: true,
+        specialAura: 'rainbow',
+        badge: '🦄',
+        tag: 'BÜYÜLÜ',
+        icon: '🦄'
+      },
+      {
         id: 'royal_gold',
-        name: 'Altın Kral Kedi',
-        desc: 'Saf altından taç, kraliyet moru pelerin ve altın ışıltı!',
-        cost: 28,
-        minScore: 3000,
+        name: '24K Saf Altın Kral Kedi',
+        desc: 'Saf altın taç, kraliyet yakutları, mor kadife pelerin ve altın ışıltı!',
+        cost: 650,
+        minScore: 10000,
         hatColor: '#eab308',
         shirtColor: '#fbbf24',
         overallsColor: '#581c87',
@@ -1042,10 +1129,55 @@
         hasCrown: true,
         specialAura: 'gold',
         badge: '👑',
-        tag: 'KRALİYET',
+        tag: 'HÜKÜMDAR',
         icon: '👑'
       }
     ];
+
+    // Dinamik Rastgele Soru Üretici (Her baştan başlama veya can bitişinde sorular değişir)
+    function generateLevelQuestions(lvlIdx) {
+      const pool = [];
+      if (lvlIdx === 0) {
+        // 2, 3, 4 çarpım tablosu
+        for (const t of [2, 3, 4]) {
+          for (let m = 2; m <= 10; m++) pool.push([t, m]);
+        }
+      } else if (lvlIdx === 1) {
+        // 5, 6, 7 çarpım tablosu
+        for (const t of [5, 6, 7]) {
+          for (let m = 2; m <= 10; m++) pool.push([t, m]);
+        }
+      } else if (lvlIdx === 2) {
+        // 8, 9, 10 çarpım tablosu
+        for (const t of [8, 9, 10]) {
+          for (let m = 2; m <= 10; m++) pool.push([t, m]);
+        }
+      } else {
+        // Karma zor sorular (6x7, 7x8, 8x9, 9x9 vb.)
+        for (const t of [4, 5, 6, 7, 8, 9]) {
+          for (let m = 6; m <= 9; m++) pool.push([t, m]);
+        }
+        pool.push([7, 7], [8, 8], [9, 9], [6, 7], [7, 8], [8, 9], [6, 8], [7, 9], [9, 6], [8, 7]);
+      }
+
+      // Karıştır ve 10 benzersiz soru seç
+      const shuffled = pool.sort(() => Math.random() - 0.5);
+      const selected = [];
+      const seen = new Set();
+      for (const [n1, n2] of shuffled) {
+        const k1 = `${n1}x${n2}`;
+        const k2 = `${n2}x${n1}`;
+        if (!seen.has(k1) && !seen.has(k2)) {
+          seen.add(k1);
+          selected.push(Math.random() > 0.5 ? [n2, n1] : [n1, n2]);
+        }
+        if (selected.length >= 10) break;
+      }
+      while (selected.length < 10) {
+        selected.push(pool[Math.floor(Math.random() * pool.length)]);
+      }
+      return selected;
+    }
 
     function generateChoices(n1, n2, answer) {
       const set = new Set([answer]);
@@ -1146,6 +1278,8 @@
 
       startLevel(lvl) {
         this.levelIndex = lvl;
+        // Her bölüm başladığında veya tekrarlandığında rastgele yepyeni sorular üretilir
+        LEVELS[lvl].questions = generateLevelQuestions(lvl);
         this.questionIndex = 0;
         this.worldScroll = 0;
         this.isAdvancing = false;
@@ -1295,7 +1429,7 @@
           }
 
         } else {
-          // YANLIŞ CEVAP: Blok sarsılır ve KOOPA TROOPA KAPLUMBAĞA DÜŞER!
+          // YANLIŞ CEVAP: Blok sarsılır, kaplumbağa çıkar ve DİREK 1 CANI SİLER!
           b.state = 'hit_wrong';
           b.shakeTimer = 0.45;
           sound.wrong();
@@ -1303,18 +1437,31 @@
 
           this.streak = 0;
           this.cat.shakeTimer = 0.4;
+          this.cat.invulnerableTimer = 1.3;
 
           // Kaplumbağa fırlat!
           this.spawnTurtleEnemy(b.x + b.w / 2 - 20, b.y + b.h);
 
+          // DİREK 1 CAN SİLİNİR (Kaplumbağa hemen canı alır!)
+          this.lives -= 1;
+          sound.lifeLost();
+          if (navigator.vibrate) navigator.vibrate([80, 50, 150]);
+
           const lvlData = LEVELS[this.levelIndex];
           const [n1, n2] = lvlData.questions[this.questionIndex];
           const hintBox = document.getElementById('hint-box');
-          hintBox.innerText = `🐢 DİKKAT! Kaplumbağadan kaç ya da üstüne zıpla! İpucu: ${n1} x ${n2} demek ${n1} tane ${n2}'nin toplamıdır!`;
+          hintBox.innerText = `🐢 DİKKAT! Kaplumbağa 1 canını aldı! İpucu: ${n1} x ${n2} demek ${n1} tane ${n2}'nin toplamıdır!`;
           hintBox.style.display = 'block';
 
-          this.addFloatingText(b.x + b.w / 2, b.y - 15, 'DİKKAT! KAPLUMBAĞA! 🐢', '#ef4444', 22);
+          this.addFloatingText(b.x + b.w / 2, b.y - 15, 'KAPLUMBAĞA CANINI ALDI! -1 CAN! 💔', '#ef4444', 24);
           this.updateHUD();
+
+          // 3 CAN BİTİP ÖLDÜĞÜNDE PUANI SIFIRLA!
+          if (this.lives <= 0) {
+            this.score = 0;
+            this.streak = 0;
+            this.gameOver();
+          }
         }
       }
 
@@ -1357,12 +1504,16 @@
       }
 
       gameOver() {
-        document.getElementById('game-over-score').innerText = this.score;
+        this.score = 0;
+        this.streak = 0;
+        document.getElementById('game-over-score').innerText = '0 (Sıfırlandı)';
         document.getElementById('game-over-coins').innerText = `🪙 ${this.coins}`;
         document.getElementById('game-over-modal').style.display = 'flex';
       }
 
       retryLevelAfterGameOver() {
+        this.score = 0;
+        this.streak = 0;
         this.lives = 3;
         this.startLevel(this.levelIndex);
       }
@@ -1558,9 +1709,9 @@
         if (this.cat.shakeTimer > 0) this.cat.shakeTimer -= dt;
         if (this.cat.happyTimer > 0) this.cat.happyTimer -= dt;
 
-        // Özel Kostüm Auraları (Ateş / Yıldız / Altın)
+        // Özel Kostüm Auraları (Ateş / Yıldız / Altın / Buz / Gökkuşağı / Kozmik / Siber)
         const activeCostume = COSTUMES.find(c => c.id === this.currentCostumeId);
-        if (activeCostume && activeCostume.specialAura === 'fire' && Math.random() < 0.25) {
+        if (activeCostume && activeCostume.specialAura === 'fire' && Math.random() < 0.28) {
           this.particles.push({
             x: this.cat.x + this.cat.w / 2 + (Math.random() - 0.5) * 16,
             y: this.cat.y + this.cat.h - 6,
@@ -1572,7 +1723,7 @@
             life: 0,
             maxLife: 0.35
           });
-        } else if (activeCostume && activeCostume.specialAura === 'stars' && Math.random() < 0.2) {
+        } else if (activeCostume && activeCostume.specialAura === 'stars' && Math.random() < 0.22) {
           this.particles.push({
             x: this.cat.x + Math.random() * this.cat.w,
             y: this.cat.y + Math.random() * this.cat.h,
@@ -1595,6 +1746,55 @@
             alpha: 0.9,
             life: 0,
             maxLife: 0.45
+          });
+        } else if (activeCostume && activeCostume.specialAura === 'ice' && Math.random() < 0.25) {
+          this.particles.push({
+            x: this.cat.x + Math.random() * this.cat.w,
+            y: this.cat.y + Math.random() * this.cat.h,
+            vx: (Math.random() - 0.5) * 0.8,
+            vy: -0.5 - Math.random() * 1.2,
+            color: Math.random() > 0.5 ? '#38bdf8' : '#e0f2fe',
+            size: 3 + Math.random() * 3,
+            alpha: 0.9,
+            life: 0,
+            maxLife: 0.4
+          });
+        } else if (activeCostume && activeCostume.specialAura === 'rainbow' && Math.random() < 0.3) {
+          const rainbowColors = ['#f43f5e', '#ec4899', '#a855f7', '#3b82f6', '#10b981', '#facc15'];
+          this.particles.push({
+            x: this.cat.x + Math.random() * this.cat.w,
+            y: this.cat.y + Math.random() * this.cat.h,
+            vx: (Math.random() - 0.5) * 1.2,
+            vy: -0.8 - Math.random() * 1.5,
+            color: rainbowColors[Math.floor(Math.random() * rainbowColors.length)],
+            size: 4 + Math.random() * 3,
+            alpha: 0.95,
+            life: 0,
+            maxLife: 0.5
+          });
+        } else if (activeCostume && activeCostume.specialAura === 'cosmic' && Math.random() < 0.25) {
+          this.particles.push({
+            x: this.cat.x + Math.random() * this.cat.w,
+            y: this.cat.y + Math.random() * this.cat.h,
+            vx: (Math.random() - 0.5) * 1.4,
+            vy: -1.2,
+            color: Math.random() > 0.5 ? '#c084fc' : '#38bdf8',
+            size: 3.5 + Math.random() * 3.5,
+            alpha: 0.85,
+            life: 0,
+            maxLife: 0.45
+          });
+        } else if (activeCostume && activeCostume.specialAura === 'cyber' && Math.random() < 0.25) {
+          this.particles.push({
+            x: this.cat.x + Math.random() * this.cat.w,
+            y: this.cat.y + Math.random() * this.cat.h,
+            vx: (Math.random() - 0.5) * 1.6,
+            vy: -1.5,
+            color: Math.random() > 0.5 ? '#22d3ee' : '#4ade80',
+            size: 3 + Math.random() * 3,
+            alpha: 0.9,
+            life: 0,
+            maxLife: 0.35
           });
         }
 
@@ -2119,147 +2319,505 @@
         this.ctx.restore();
       }
 
-      // KEDİ (MARIO CAT) & KOSTÜM ÇİZİMİ
+      // MARIO CAT 3D VOLUMETRIC RENDERING (PIXAR/NINTENDO STYLE 3D SHADING, GLOSSY EYES, ACCESSORIES)
       renderCat() {
         const c = this.cat;
         const costume = COSTUMES.find(cos => cos.id === this.currentCostumeId) || COSTUMES[0];
 
+        // 0. Dinamik 3 Boyutlu Zemin Gölgesi (Ambient Occlusion)
+        const distFromGround = Math.max(0, this.groundY - (c.y + c.h));
+        const shadowScale = Math.max(0.35, 1 - distFromGround / 180);
+        const shadowAlpha = Math.max(0.12, 0.42 * (1 - distFromGround / 220));
+
+        this.ctx.save();
+        this.ctx.translate(c.x + c.w / 2, this.groundY - 2);
+        this.ctx.scale(shadowScale, shadowScale * 0.4);
+        const shadowGrad = this.ctx.createRadialGradient(0, 0, 4, 0, 0, 24);
+        shadowGrad.addColorStop(0, `rgba(0, 0, 0, ${shadowAlpha})`);
+        shadowGrad.addColorStop(0.6, `rgba(0, 0, 0, ${shadowAlpha * 0.6})`);
+        shadowGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        this.ctx.fillStyle = shadowGrad;
+        this.ctx.beginPath();
+        this.ctx.arc(0, 0, 24, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+
         this.ctx.save();
 
-        // Hasar alma anında yanıp sönme efekti
-        if (c.invulnerableTimer > 0 && Math.floor(c.invulnerableTimer * 12) % 2 === 0) {
-          this.ctx.globalAlpha = 0.4;
+        // Hasar anında yanıp sönme
+        if (c.invulnerableTimer > 0 && Math.floor(c.invulnerableTimer * 20) % 2 === 0) {
+          this.ctx.globalAlpha = 0.35;
+        }
+
+        // 3D Squash & Stretch
+        let squashX = 1;
+        let squashY = 1;
+        if (c.isJumping) {
+          squashX = 0.94;
+          squashY = 1.06;
+        } else if (c.shakeTimer > 0) {
+          squashX = 1.08;
+          squashY = 0.92;
         }
 
         this.ctx.translate(c.x + c.w / 2, c.y + c.h / 2);
-        if (c.facing === 'left') this.ctx.scale(-1, 1);
+        this.ctx.scale(c.facing === 'left' ? -squashX : squashX, squashY);
 
-        // Sarsıntı
         if (c.shakeTimer > 0) {
-          this.ctx.translate((Math.random() - 0.5) * 6, 0);
+          this.ctx.rotate(Math.sin(c.shakeTimer * 20) * 0.15);
+        } else if (c.happyTimer > 0) {
+          this.ctx.translate(0, -Math.sin(c.happyTimer * 15) * 8);
+        } else if (this.isAdvancing || this.isCastleRun) {
+          this.ctx.rotate(0.08);
         }
 
-        // Süper Kahraman / Kraliyet Pelerini
+        // 1. Dalgalanan 3D İpek Pelerin (Varsa)
         if (costume.capeColor) {
-          this.ctx.fillStyle = costume.capeColor;
+          this.ctx.save();
+          const wave = Math.sin(c.walkCycle * 0.9 || performance.now() / 250) * 8;
+          // Alt gölge katmanı
+          this.ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
           this.ctx.beginPath();
-          const capeSway = Math.sin(c.walkCycle * 0.8) * 8;
-          this.ctx.moveTo(-10, -6);
-          this.ctx.lineTo(-24 + capeSway, 24);
-          this.ctx.lineTo(0, 18);
+          this.ctx.moveTo(-8, -4);
+          this.ctx.quadraticCurveTo(-34 + wave, 14, -26 + wave, 28);
+          this.ctx.lineTo(-4, 18);
+          this.ctx.closePath();
+          this.ctx.fill();
+
+          // Dış pelerin 3D lineer gradyan
+          const capeGrad = this.ctx.createLinearGradient(-10, -4, -28 + wave, 28);
+          capeGrad.addColorStop(0, costume.capeColor);
+          capeGrad.addColorStop(1, '#1e1b4b');
+          this.ctx.fillStyle = capeGrad;
+          this.ctx.beginPath();
+          this.ctx.moveTo(-10, -4);
+          this.ctx.quadraticCurveTo(-30 + wave, 12, -22 + wave, 26);
+          this.ctx.lineTo(-4, 18);
+          this.ctx.closePath();
+          this.ctx.fill();
+          this.ctx.restore();
+        }
+
+        // 2. 3 Boyutlu Kedi Kuyruğu
+        this.ctx.save();
+        const isTanooki = costume.id === 'tanooki';
+        const tailWag = c.isJumping ? -18 : Math.sin(c.walkCycle) * (this.isAdvancing || this.isCastleRun ? 16 : 10);
+
+        if (isTanooki) {
+          // 3D Tanooki Rakun Kuyruğu (3 çizgili)
+          this.ctx.strokeStyle = '#78350f';
+          this.ctx.lineWidth = 14;
+          this.ctx.lineCap = 'round';
+          this.ctx.beginPath();
+          this.ctx.moveTo(-16, 12);
+          this.ctx.quadraticCurveTo(-34 + tailWag, 4, -26 + tailWag, -10);
+          this.ctx.stroke();
+
+          this.ctx.strokeStyle = '#b45309';
+          this.ctx.lineWidth = 12;
+          this.ctx.beginPath();
+          this.ctx.moveTo(-22, 9);
+          this.ctx.lineTo(-24 + tailWag * 0.5, 4);
+          this.ctx.stroke();
+
+          this.ctx.strokeStyle = '#fef3c7';
+          this.ctx.lineWidth = 10;
+          this.ctx.beginPath();
+          this.ctx.moveTo(-28 + tailWag, -5);
+          this.ctx.lineTo(-26 + tailWag, -10);
+          this.ctx.stroke();
+        } else {
+          // 3D Yumuşak Tüylü Kedi Kuyruğu
+          this.ctx.lineWidth = 8;
+          this.ctx.lineCap = 'round';
+          const furColor = costume.hatColor === '#eab308' ? '#ca8a04' : '#f59e0b';
+          const tailGrad = this.ctx.createLinearGradient(-16, 12, -26 + tailWag, -10);
+          tailGrad.addColorStop(0, furColor);
+          tailGrad.addColorStop(0.7, '#fbbf24');
+          tailGrad.addColorStop(1, '#ffffff');
+          this.ctx.strokeStyle = tailGrad;
+          this.ctx.beginPath();
+          this.ctx.moveTo(-16, 12);
+          this.ctx.quadraticCurveTo(-32 + tailWag, 4, -26 + tailWag, -10);
+          this.ctx.stroke();
+
+          // 3D Beyaz Kuyruk Ucu
+          this.ctx.fillStyle = '#ffffff';
+          this.ctx.beginPath();
+          this.ctx.arc(-26 + tailWag, -10, 5, 0, Math.PI * 2);
           this.ctx.fill();
         }
+        this.ctx.restore();
 
-        // Kedi Kuyruğu
-        this.ctx.strokeStyle = '#fed7aa';
-        this.ctx.lineWidth = 5;
-        this.ctx.beginPath();
-        const tailWiggle = Math.sin(c.walkCycle * 0.9) * 10;
-        this.ctx.moveTo(-16, 12);
-        this.ctx.quadraticCurveTo(-26 + tailWiggle, 0, -22 + tailWiggle, -12);
-        this.ctx.stroke();
+        // 3. 3D Bacaklar & Çizgi Film Botları
+        const legSwing = c.isJumping ? 0 : Math.sin(c.walkCycle) * (this.isAdvancing || this.isCastleRun ? 11 : 7);
+        this.draw3DLeg(-14 + legSwing, 16, costume.overallsColor);
+        this.draw3DLeg(4 - legSwing, 16, costume.overallsColor);
 
-        // Gövde / Gömlek
-        this.ctx.fillStyle = costume.shirtColor;
+        // 4. 3D Gövde, Gömlek ve Tulum
+        const shirtGrad = this.ctx.createLinearGradient(-16, -6, 16, 16);
+        shirtGrad.addColorStop(0, '#ffffff');
+        shirtGrad.addColorStop(0.3, costume.shirtColor);
+        shirtGrad.addColorStop(1, '#0f172a');
+        this.ctx.fillStyle = shirtGrad;
         this.ctx.beginPath();
-        this.ctx.roundRect(-14, -6, 28, 26, 6);
+        this.ctx.roundRect(-16, -6, 32, 22, 8);
         this.ctx.fill();
 
-        // Tulum
+        // 3D Tulum
+        const overallsGrad = this.ctx.createLinearGradient(-15, 2, 15, 20);
+        overallsGrad.addColorStop(0, '#60a5fa');
+        overallsGrad.addColorStop(0.5, costume.overallsColor);
+        overallsGrad.addColorStop(1, '#0f172a');
+        this.ctx.fillStyle = overallsGrad;
+        this.ctx.beginPath();
+        this.ctx.roundRect(-15, 3, 30, 17, 6);
+        this.ctx.fill();
+
+        // Tulum Askıları
         this.ctx.fillStyle = costume.overallsColor;
         this.ctx.beginPath();
-        this.ctx.roundRect(-13, 4, 26, 16, 5);
+        this.ctx.roundRect(-13, -5, 6, 12, 2);
+        this.ctx.roundRect(7, -5, 6, 12, 2);
         this.ctx.fill();
 
-        // Tulum Askıları ve Sarı Düğmeleri
-        this.ctx.fillStyle = '#facc15';
-        this.ctx.beginPath();
-        this.ctx.arc(-8, 8, 2.5, 0, Math.PI * 2);
-        this.ctx.arc(8, 8, 2.5, 0, Math.PI * 2);
-        this.ctx.fill();
+        // 3D Parlayan Pirinç Düğmeler
+        this.draw3DGoldButton(-10, 7, 3);
+        this.draw3DGoldButton(10, 7, 3);
 
-        // Ayaklar (Yürüme Salınımı)
-        const legShift = Math.sin(c.walkCycle) * 7;
-        this.ctx.fillStyle = '#78350f'; // Kahverengi ayakkabılar
-        this.ctx.beginPath();
-        this.ctx.roundRect(-14 + legShift, 20, 12, 10, 4);
-        this.ctx.roundRect(2 - legShift, 20, 12, 10, 4);
-        this.ctx.fill();
-
-        // Kafa
-        this.ctx.fillStyle = '#fed7aa';
-        this.ctx.beginPath();
-        this.ctx.arc(0, -14, 17, 0, Math.PI * 2);
-        this.ctx.fill();
-
-        // Kedi Kulakları
-        this.ctx.fillStyle = '#fed7aa';
-        this.ctx.beginPath();
-        this.ctx.moveTo(-14, -24);
-        this.ctx.lineTo(-9, -34);
-        this.ctx.lineTo(-4, -26);
-        this.ctx.fill();
-
-        this.ctx.beginPath();
-        this.ctx.moveTo(4, -26);
-        this.ctx.lineTo(9, -34);
-        this.ctx.lineTo(14, -24);
-        this.ctx.fill();
-
-        // Şapka
-        this.ctx.fillStyle = costume.hatColor;
-        this.ctx.beginPath();
-        this.ctx.arc(0, -20, 17, Math.PI, 0, false);
-        this.ctx.fill();
-        this.ctx.fillRect(-20, -22, 28, 6); // Siperlik
-
-        // Şapka Amblemi (Beyaz Daire & Harf)
-        this.ctx.fillStyle = '#ffffff';
-        this.ctx.beginPath();
-        this.ctx.arc(2, -26, 6, 0, Math.PI * 2);
-        this.ctx.fill();
-
-        this.ctx.fillStyle = costume.hatColor === '#ffffff' ? '#dc2626' : costume.hatColor;
-        this.ctx.font = 'bold 9px sans-serif';
-        this.ctx.textAlign = 'center';
-        this.ctx.textBaseline = 'middle';
-        this.ctx.fillText(costume.badge, 2, -26);
-
-        // Altın Taç (Kraliyet kostümü için)
-        if (costume.hasCrown) {
-          this.ctx.fillStyle = '#facc15';
-          this.ctx.beginPath();
-          this.ctx.moveTo(-8, -32);
-          this.ctx.lineTo(-5, -40);
-          this.ctx.lineTo(0, -34);
-          this.ctx.lineTo(5, -40);
-          this.ctx.lineTo(8, -32);
-          this.ctx.fill();
+        // 5. 3D Beyaz Çizgi Film Eldivenleri ve Yumruk
+        if (c.isJumping) {
+          this.draw3DArm(12, -8, 14, -22, costume.shirtColor);
+        } else {
+          const armBob = Math.sin(c.walkCycle) * 4;
+          this.draw3DGlove(14, 6 + armBob, 6);
+          this.draw3DGlove(-14, 6 - armBob, 5.5);
         }
 
-        // Kahraman Maskesi
-        if (costume.hasMask) {
-          this.ctx.fillStyle = '#1e1b4b';
-          this.ctx.fillRect(-12, -18, 24, 7);
-        }
-
-        // Gözler & Bıyıklar
-        this.ctx.fillStyle = '#0f172a';
+        // 6. 3D Kedi Kafası (Küre Hacim Gradyanı)
+        const furBase = '#f97316';
+        const headGrad = this.ctx.createRadialGradient(-5, -20, 3, 0, -14, 20);
+        headGrad.addColorStop(0, '#fef08a');
+        headGrad.addColorStop(0.4, furBase);
+        headGrad.addColorStop(1, '#9a3412');
+        this.ctx.fillStyle = headGrad;
         this.ctx.beginPath();
-        this.ctx.arc(-4, -14, 2.5, 0, Math.PI * 2);
-        this.ctx.arc(8, -14, 2.5, 0, Math.PI * 2);
+        this.ctx.arc(0, -14, 18, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // 3D Yanak Allığı
+        this.ctx.fillStyle = 'rgba(244, 63, 94, 0.28)';
+        this.ctx.beginPath();
+        this.ctx.arc(-8, -10, 4.5, 0, Math.PI * 2);
+        this.ctx.arc(10, -10, 4.5, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // 3D Beyaz Pofuduk Ağız & Burun
+        const muzzleGrad = this.ctx.createRadialGradient(2, -10, 2, 3, -9, 10);
+        muzzleGrad.addColorStop(0, '#ffffff');
+        muzzleGrad.addColorStop(0.8, '#f8fafc');
+        muzzleGrad.addColorStop(1, '#cbd5e1');
+        this.ctx.fillStyle = muzzleGrad;
+        this.ctx.beginPath();
+        this.ctx.ellipse(3, -9, 10, 7, 0, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // Sevimli Pembe Burun
+        this.ctx.fillStyle = '#f43f5e';
+        this.ctx.beginPath();
+        this.ctx.moveTo(3, -11);
+        this.ctx.lineTo(6, -8);
+        this.ctx.lineTo(0, -8);
+        this.ctx.closePath();
         this.ctx.fill();
 
         // Bıyıklar
-        this.ctx.strokeStyle = '#475569';
-        this.ctx.lineWidth = 1.2;
+        this.ctx.strokeStyle = '#334155';
+        this.ctx.lineWidth = 1.4;
+        this.ctx.lineCap = 'round';
         this.ctx.beginPath();
-        this.ctx.moveTo(10, -12);
-        this.ctx.lineTo(20, -14);
-        this.ctx.moveTo(10, -10);
-        this.ctx.lineTo(20, -8);
+        this.ctx.moveTo(8, -8); this.ctx.lineTo(21, -11);
+        this.ctx.moveTo(8, -6); this.ctx.lineTo(22, -6);
+        this.ctx.moveTo(-2, -8); this.ctx.lineTo(-13, -11);
+        this.ctx.moveTo(-2, -6); this.ctx.lineTo(-14, -6);
         this.ctx.stroke();
 
+        // 7. 3D Parlak Pixar Tarzı Gözler
+        if (costume.hasMask) {
+          this.ctx.fillStyle = '#1e1b4b';
+          this.ctx.beginPath();
+          this.ctx.roundRect(-2, -22, 19, 12, 5);
+          this.ctx.fill();
+        } else if (costume.id === 'cyber_mecha') {
+          // Siber LED Vizör
+          const visorGrad = this.ctx.createLinearGradient(-4, -22, 16, -10);
+          visorGrad.addColorStop(0, '#06b6d4');
+          visorGrad.addColorStop(0.5, '#22d3ee');
+          visorGrad.addColorStop(1, '#3b82f6');
+          this.ctx.fillStyle = visorGrad;
+          this.ctx.beginPath();
+          this.ctx.roundRect(-3, -22, 20, 10, 4);
+          this.ctx.fill();
+          this.ctx.strokeStyle = '#ffffff';
+          this.ctx.lineWidth = 1.5;
+          this.ctx.stroke();
+        }
+
+        if (costume.id !== 'cyber_mecha') {
+          this.draw3DEye(5, -17, 4, 6);
+        }
+
+        // 8. 3D Kulaklar
+        this.draw3DCatEar(-16, -26, -9, -40, -2, -28, furBase);
+        this.draw3DCatEar(2, -28, 9, -40, 16, -26, furBase);
+
+        // 9. 3D Mario Şapkası (Hacimli Kubbe & Kıvrık Siperlik)
+        const capGrad = this.ctx.createRadialGradient(-3, -30, 2, 0, -26, 18);
+        capGrad.addColorStop(0, '#ffffff');
+        capGrad.addColorStop(0.4, costume.hatColor);
+        capGrad.addColorStop(1, '#7f1d1d');
+        this.ctx.fillStyle = capGrad;
+        this.ctx.beginPath();
+        this.ctx.ellipse(0, -26, 17, 11, 0, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // Siperlik Gölgesi & Siperlik
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+        this.ctx.beginPath();
+        this.ctx.ellipse(8, -19, 13, 5, 0.15, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        const brimGrad = this.ctx.createLinearGradient(0, -24, 16, -18);
+        brimGrad.addColorStop(0, '#f87171');
+        brimGrad.addColorStop(0.7, costume.hatColor);
+        brimGrad.addColorStop(1, '#991b1b');
+        this.ctx.fillStyle = brimGrad;
+        this.ctx.beginPath();
+        this.ctx.ellipse(8, -22, 13, 5.5, 0.18, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // 10. Aksesuar: Altın Taç, Boynuz, Zırh veya Kabartmalı Rozet
+        if (costume.hasCrown) {
+          this.draw3DGoldCrown(0, -32);
+        } else if (costume.id === 'unicorn') {
+          this.draw3DUnicornHorn(4, -30);
+        } else if (costume.id === 'diamond_knight') {
+          this.draw3DKnightArmor(0, -26);
+        } else {
+          this.draw3DEmbossedBadge(1, -26, costume.badge, costume.hatColor);
+        }
+
+        this.ctx.restore();
+      }
+
+      draw3DLeg(x, y, overallsColor) {
+        this.ctx.save();
+        const legGrad = this.ctx.createLinearGradient(x, y, x + 12, y);
+        legGrad.addColorStop(0, '#60a5fa');
+        legGrad.addColorStop(0.5, overallsColor);
+        legGrad.addColorStop(1, '#0f172a');
+        this.ctx.fillStyle = legGrad;
+        this.ctx.beginPath();
+        this.ctx.roundRect(x, y, 12, 12, 3);
+        this.ctx.fill();
+
+        this.ctx.fillStyle = '#1e1b4b';
+        this.ctx.beginPath();
+        this.ctx.roundRect(x - 2, y + 10, 16, 5, 2);
+        this.ctx.fill();
+
+        const bootGrad = this.ctx.createRadialGradient(x + 5, y + 11, 2, x + 6, y + 12, 10);
+        bootGrad.addColorStop(0, '#a16207');
+        bootGrad.addColorStop(0.5, '#78350f');
+        bootGrad.addColorStop(1, '#451a03');
+        this.ctx.fillStyle = bootGrad;
+        this.ctx.beginPath();
+        this.ctx.roundRect(x - 2, y + 4, 16, 8, 4);
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DGoldButton(cx, cy, r) {
+        this.ctx.save();
+        const btnGrad = this.ctx.createRadialGradient(cx - 1, cy - 1, 0.5, cx, cy, r);
+        btnGrad.addColorStop(0, '#fef08a');
+        btnGrad.addColorStop(0.4, '#facc15');
+        btnGrad.addColorStop(0.9, '#ca8a04');
+        btnGrad.addColorStop(1, '#713f12');
+        this.ctx.fillStyle = btnGrad;
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.beginPath();
+        this.ctx.arc(cx - 1, cy - 1, r * 0.35, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DArm(x1, y1, x2, y2, sleeveColor) {
+        this.ctx.save();
+        this.ctx.strokeStyle = sleeveColor;
+        this.ctx.lineWidth = 9;
+        this.ctx.lineCap = 'round';
+        this.ctx.beginPath();
+        this.ctx.moveTo(x1, y1);
+        this.ctx.lineTo(x2, y2);
+        this.ctx.stroke();
+
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.beginPath();
+        this.ctx.arc(x2, y2, 8, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#cbd5e1';
+        this.ctx.lineWidth = 1.5;
+        this.ctx.stroke();
+        this.ctx.restore();
+      }
+
+      draw3DGlove(cx, cy, r) {
+        this.ctx.save();
+        const gloveGrad = this.ctx.createRadialGradient(cx - 2, cy - 2, 1, cx, cy, r);
+        gloveGrad.addColorStop(0, '#ffffff');
+        gloveGrad.addColorStop(0.7, '#f1f5f9');
+        gloveGrad.addColorStop(1, '#cbd5e1');
+        this.ctx.fillStyle = gloveGrad;
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#94a3b8';
+        this.ctx.lineWidth = 1;
+        this.ctx.stroke();
+        this.ctx.restore();
+      }
+
+      draw3DEye(cx, cy, rw, rh) {
+        this.ctx.save();
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.beginPath();
+        this.ctx.ellipse(cx, cy, rw, rh, 0, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#334155';
+        this.ctx.lineWidth = 1.2;
+        this.ctx.stroke();
+
+        const irisGrad = this.ctx.createRadialGradient(cx, cy - 0.5, 0.5, cx, cy, 3);
+        irisGrad.addColorStop(0, '#0284c7');
+        irisGrad.addColorStop(0.7, '#0369a1');
+        irisGrad.addColorStop(1, '#0f172a');
+        this.ctx.fillStyle = irisGrad;
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        this.ctx.fillStyle = '#0f172a';
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy, 1.8, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        this.ctx.fillStyle = '#ffffff';
+        this.ctx.beginPath();
+        this.ctx.arc(cx - 1, cy - 1.5, 1.2, 0, Math.PI * 2);
+        this.ctx.arc(cx + 1, cy + 1, 0.6, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DCatEar(x1, y1, x2, y2, x3, y3, furBase) {
+        this.ctx.save();
+        this.ctx.fillStyle = furBase;
+        this.ctx.beginPath();
+        this.ctx.moveTo(x1, y1);
+        this.ctx.lineTo(x2, y2);
+        this.ctx.lineTo(x3, y3);
+        this.ctx.closePath();
+        this.ctx.fill();
+
+        this.ctx.fillStyle = '#fbcfe8';
+        this.ctx.beginPath();
+        const mx = (x1 + x3) / 2;
+        const my = (y1 + y3) / 2;
+        this.ctx.moveTo(x1 * 0.7 + mx * 0.3, y1 * 0.7 + my * 0.3);
+        this.ctx.lineTo(x2 * 0.75 + mx * 0.25, y2 * 0.75 + my * 0.25);
+        this.ctx.lineTo(x3 * 0.7 + mx * 0.3, y3 * 0.7 + my * 0.3);
+        this.ctx.closePath();
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DGoldCrown(cx, cy) {
+        this.ctx.save();
+        const crownGrad = this.ctx.createLinearGradient(cx - 10, cy, cx + 10, cy);
+        crownGrad.addColorStop(0, '#fef08a');
+        crownGrad.addColorStop(0.5, '#eab308');
+        crownGrad.addColorStop(1, '#a16207');
+        this.ctx.fillStyle = crownGrad;
+        this.ctx.beginPath();
+        this.ctx.moveTo(cx - 9, cy);
+        this.ctx.lineTo(cx - 12, cy - 11);
+        this.ctx.lineTo(cx - 5, cy - 5);
+        this.ctx.lineTo(cx, cy - 13);
+        this.ctx.lineTo(cx + 5, cy - 5);
+        this.ctx.lineTo(cx + 12, cy - 11);
+        this.ctx.lineTo(cx + 9, cy);
+        this.ctx.closePath();
+        this.ctx.fill();
+
+        this.ctx.fillStyle = '#ef4444';
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy - 6, 2, 0, Math.PI * 2);
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DUnicornHorn(cx, cy) {
+        this.ctx.save();
+        const hornGrad = this.ctx.createLinearGradient(cx - 4, cy, cx + 4, cy - 16);
+        hornGrad.addColorStop(0, '#fef08a');
+        hornGrad.addColorStop(0.5, '#f472b6');
+        hornGrad.addColorStop(1, '#38bdf8');
+        this.ctx.fillStyle = hornGrad;
+        this.ctx.beginPath();
+        this.ctx.moveTo(cx - 4, cy);
+        this.ctx.lineTo(cx + 2, cy - 16);
+        this.ctx.lineTo(cx + 5, cy);
+        this.ctx.closePath();
+        this.ctx.fill();
+        this.ctx.restore();
+      }
+
+      draw3DKnightArmor(cx, cy) {
+        this.ctx.save();
+        const helmetGrad = this.ctx.createLinearGradient(cx - 12, cy, cx + 12, cy);
+        helmetGrad.addColorStop(0, '#38bdf8');
+        helmetGrad.addColorStop(0.5, '#0284c7');
+        helmetGrad.addColorStop(1, '#0c4a6e');
+        this.ctx.fillStyle = helmetGrad;
+        this.ctx.beginPath();
+        this.ctx.roundRect(cx - 8, cy - 6, 18, 8, 3);
+        this.ctx.fill();
+        this.ctx.strokeStyle = '#ffffff';
+        this.ctx.lineWidth = 1;
+        this.ctx.stroke();
+        this.ctx.restore();
+      }
+
+      draw3DEmbossedBadge(cx, cy, letter, hatColor) {
+        this.ctx.save();
+        const badgeGrad = this.ctx.createRadialGradient(cx - 1, cy - 1, 1, cx, cy, 7);
+        badgeGrad.addColorStop(0, '#ffffff');
+        badgeGrad.addColorStop(0.8, '#f8fafc');
+        badgeGrad.addColorStop(1, '#cbd5e1');
+        this.ctx.fillStyle = badgeGrad;
+        this.ctx.beginPath();
+        this.ctx.arc(cx, cy, 6.5, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        this.ctx.fillStyle = hatColor === '#ffffff' ? '#dc2626' : hatColor;
+        this.ctx.font = "900 9px 'Fredoka', sans-serif";
+        this.ctx.textAlign = 'center';
+        this.ctx.textBaseline = 'middle';
+        this.ctx.fillText(letter || 'M', cx, cy + 0.5);
         this.ctx.restore();
       }
 

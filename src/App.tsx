@@ -181,8 +181,9 @@ export default function App() {
     haptics.buttonPress();
     if (engineRef.current) {
       engineRef.current.restartGame();
-      const q1 = getLevelQuestions(1);
-      engineRef.current.setQuestions(q1);
+      setScore(0);
+      setStreak(0);
+      setLives(3);
       setIsLevelComplete(false);
       setIsGameFinished(false);
       setIsGameOver(false);
@@ -193,6 +194,9 @@ export default function App() {
     haptics.buttonPress();
     if (engineRef.current) {
       engineRef.current.retryCurrentLevel();
+      setScore(0);
+      setStreak(0);
+      setLives(3);
       setIsGameOver(false);
     }
   };
@@ -515,24 +519,24 @@ export default function App() {
                   Ama Sakın Üzülme, Pratikle Usta Olunur!
                 </h3>
                 <p className="text-slate-300 text-xs sm:text-sm mb-5 leading-relaxed">
-                  Kaplumbağalar canlarını aldı. Çarpım tablosunda başarı denedikçe gelir! 3 yeni can ile bu bölüme tekrar başla!
+                  Kaplumbağalar canlarını aldı! Puanın sıfırlandı ancak altınların güvende. 3 yeni can ve yepyeni sorularla hemen bu bölüme tekrar başla!
                 </p>
                 <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-800 mb-5 flex justify-around items-center">
                   <div>
-                    <div className="text-[11px] text-slate-400 font-bold">MEVCUT PUAN</div>
-                    <div className="text-xl font-black text-amber-400">{score}</div>
+                    <div className="text-[11px] text-slate-400 font-bold">PUAN</div>
+                    <div className="text-xl font-black text-amber-400">0 (Sıfırlandı)</div>
                   </div>
                   <div>
-                    <div className="text-[11px] text-slate-400 font-bold">TOPLANAN ALTIN</div>
+                    <div className="text-[11px] text-slate-400 font-bold">KASANDAKİ ALTIN</div>
                     <div className="text-xl font-black text-yellow-300">🪙 {coins}</div>
                   </div>
                 </div>
                 <button
                   onClick={handleRetryAfterGameOver}
-                  className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white text-base sm:text-lg font-black py-3 rounded-2xl shadow-[0_5px_0_#14532d] active:translate-y-1 transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white text-base sm:text-lg font-black py-3 rounded-2xl shadow-[0_5px_0_#14532d] active:translate-y-1 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <RotateCcw size={18} />
-                  3 CAN İLE TEKRAR DENE 🔄
+                  3 CAN & YENİ SORULARLA BAŞLA 🔄
                 </button>
               </div>
             </div>
