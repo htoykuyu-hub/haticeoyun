@@ -1,0 +1,6 @@
+{
+  "name": "Super Mario Çarpım Tablosu - 3. Sınıf Macera",
+  "description": "3. sınıf öğrencileri için Super Mario tarzında eğlenceli, 4 seviyeli 2D platform çarpım tablosu oyunu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
